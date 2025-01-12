@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+main{
+    padding:2rem 3rem ;
+    background-color: #78767b;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font-size:3rem ;
+    color: #44e4f3;
+}
+
+.contenedor{
+    padding-top: 3rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-1,.barra-2{
+    width: 50%;
+    height: 2rem;
+    background-color: #e4f0ff;
+    border-radius: 1rem;
+}
+
+.barra-1__progreso{
+    background-color: #2ba2ef;
+    height: 100%;
+    background-image: linear-gradient(to left, #4facfe 0%, #00f2fe 100%);
+    border-radius: 1rem;
+    width: 0;
+    text-align: end;
+    font-weight: 500;
+    color: #fff;
+    padding: .3rem 1rem;
+    box-shadow: 0 3px 8px 1px#4facfe,
+                0 -3px 8px 1px  #00f2fe;
+    transition: width 1 ease;
+}
+
+.barra-2{
+    background-color: transparent;
+    border: 2px solid #156c8f;
+    box-shadow:0 0 6px 1px #156c8f;
+}
+
+.barra-2__progreso{
+    height: 100%;
+    background-color: #52cbe4;
+    border-radius: 1rem;
+    animation: carga 2s forwards ease-in;
+}
+
+@keyframes carga{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
